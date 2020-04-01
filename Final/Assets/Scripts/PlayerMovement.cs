@@ -19,8 +19,7 @@ public class PlayerMovement : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal") * speed;
         float moveVertical = Input.GetAxis("Vertical") * speed;
 
-        movement = new Vector3(moveHorizontal, 0f, moveVertical);
-        rb.AddForce(movement * speed);
+        rb.velocity = new Vector3(moveHorizontal, 0f, moveVertical);
 
 
     }
