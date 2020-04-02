@@ -12,5 +12,6 @@ public class PrefabScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.AddForce(0, thrust2, thrust, ForceMode.Impulse);
+        Destroy(this.gameObject, 1f);
     }
 }

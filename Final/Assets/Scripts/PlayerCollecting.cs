@@ -24,9 +24,9 @@ public class PlayerCollecting : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Collectable")) {
             Destroy(other.gameObject);
-            gameObject.transform.localScale += new Vector3(gameObject.transform.localScale.x * 1.01f, 
-                                                           gameObject.transform.localScale.y * 1.01f, 
-                                                           gameObject.transform.localScale.z * 1.01f);
+            gameObject.transform.localScale += new Vector3(gameObject.transform.localScale.x * 0.15f, 
+                                                           gameObject.transform.localScale.y * 0.15f, 
+                                                           gameObject.transform.localScale.z * 0.15f);
         }
     }
 
