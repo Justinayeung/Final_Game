@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class PlayerColorChange : MonoBehaviour
 {
-    Renderer rend;
+    public Material White;
+    public Material Black;
+    MeshRenderer mesh;
 
     private void Start() {
-        rend = GetComponent<Renderer>();
+        mesh = GetComponent<MeshRenderer>();
     }
 
     public void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Mat_Black")) { //If player is on the tag Mat_Black change player to white
-            rend.material.SetColor("_Color", Color.white);
+            mesh.material = White;
         }
         if (other.CompareTag("Mat_White")) { //If player is on the tag Mat_White change player to black
-            rend.material.SetColor("_Color", Color.black);
+            mesh.material = Black;
         }
     }
 }
