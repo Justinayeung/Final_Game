@@ -15,7 +15,7 @@ public class vignette : MonoBehaviour
     {
         v = GetComponent<PostProcessVolume>();
         v.profile.TryGetSettings<Vignette>(out vign);
-        vign.intensity.value = 0;
+        vign.intensity.value = 0.05f;
         increaseVignette = false;
     }
 
@@ -26,7 +26,7 @@ public class vignette : MonoBehaviour
 
         if (increaseVignette)
         {
-            vign.intensity.value += 2;
+            vign.intensity.value += 0.05f;
 
             increaseVignette = false;
         }
