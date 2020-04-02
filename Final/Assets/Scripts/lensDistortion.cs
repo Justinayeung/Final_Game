@@ -22,7 +22,7 @@ public class lensDistortion : MonoBehaviour
         v = GetComponent<CinemachinePostProcessing>();
         v.m_Profile.TryGetSettings<LensDistortion>(out lensD);
         lensD.intensity.value = 0;
-        lensD.scale.value = 0.33f;
+        lensD.scale.value = 1f;
 
         distort = false;
     }
