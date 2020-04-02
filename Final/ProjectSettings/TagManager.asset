@@ -8,6 +8,7 @@ TagManager:
   - Collectable
   - Mat_Black
   - Mat_White
+  - Loop_Col
   layers:
   - Default
   - TransparentFX
