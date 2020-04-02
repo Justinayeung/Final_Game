@@ -648,7 +648,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 468499452}
-  m_LocalRotation: {x: 0.12218327, y: -0.000000017602558, z: 0.0000000021630768, w: 0.9925076}
+  m_LocalRotation: {x: 0.12218325, y: 0.000000017603536, z: -0.0000000021709834, w: 0.9925076}
   m_LocalPosition: {x: 1.67, y: 3.1164172, z: -9.187506}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -778,6 +778,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae37db88f1c3b1741b76ba0284f2b3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  White: {fileID: 0}
+  Black: {fileID: 0}
 --- !u!54 &913311389
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -973,6 +975,7 @@ GameObject:
   - component: {fileID: 1051453628}
   - component: {fileID: 1051453631}
   - component: {fileID: 1051453632}
+  - component: {fileID: 1051453633}
   m_Layer: 8
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -1037,7 +1040,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051453627}
-  m_LocalRotation: {x: 0.12218327, y: -0.000000017602558, z: 0.0000000021630768, w: 0.9925076}
+  m_LocalRotation: {x: 0.12218325, y: 0.000000017603536, z: -0.0000000021709834, w: 0.9925076}
   m_LocalPosition: {x: 0, y: 3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1073,6 +1076,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distort: 0
+--- !u!114 &1051453633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051453627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6afd4f5a3a6604b9e4a853c87f3b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increaseVignette: 0
 --- !u!1 &1508889312
 GameObject:
   m_ObjectHideFlags: 3
