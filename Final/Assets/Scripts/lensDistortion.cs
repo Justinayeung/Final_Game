@@ -7,9 +7,7 @@ using Cinemachine.PostFX;
 
 public class lensDistortion : MonoBehaviour
 {
-    //When I did this for the prototype I put it on the gameobject with postprocess volume on it
-
-    //public PostProcessVolume v;
+    //put this on virtual cam with cineMachine postProcessing extension
 
     CinemachinePostProcessing v;
     LensDistortion lensD;
@@ -19,10 +17,12 @@ public class lensDistortion : MonoBehaviour
     void Start()
     {
         //v = GetComponent<PostProcessVolume>();
-        v = GetComponent<CinemachinePostProcessing>();
         //v.profile.TryGetSettings<LensDistortion>(out lensD);
+
+        v = GetComponent<CinemachinePostProcessing>();
         v.m_Profile.TryGetSettings<LensDistortion>(out lensD);
         lensD.intensity.value = 0;
+        lensD.scale.value = 1f;
 
         distort = false;
     }
