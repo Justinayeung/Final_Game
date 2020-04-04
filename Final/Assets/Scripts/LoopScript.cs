@@ -13,11 +13,21 @@ public class LoopScript : MonoBehaviour
         firstLoop = true;
     }
 
+    public bool loopIsTrue = false;
+
+    void Update()
+    {
+        if (loopIsTrue) {
+            loopIsTrue = false;
+        }
+    }
+
     public void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Loop_Col")) { //If player his the trigger for looping
             firstLoop = false;
             transform.position = fallPos.position;
             loopNum++;
+            loopIsTrue = true;
         }
     }
 }
