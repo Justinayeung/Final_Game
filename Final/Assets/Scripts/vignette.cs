@@ -12,6 +12,8 @@ public class vignette : MonoBehaviour
 
     public bool increaseVignette;
 
+    public GameObject player;
+
     void Start()
     {
         v = GetComponent<CinemachinePostProcessing>();
@@ -25,9 +27,14 @@ public class vignette : MonoBehaviour
     {
         //when a new loop starts --> increaseVignette == true
 
+        if (player.GetComponent<LoopScript>().loopIsTrue == true)
+        {
+            increaseVignette = true;
+        }
+
         if (increaseVignette)
         {
-            vign.intensity.value += 0.02f;
+            vign.intensity.value += 0.15f;
 
             increaseVignette = false;
         }
