@@ -8,6 +8,7 @@ public class LoopScript : MonoBehaviour
     public int loopNum;
     public bool firstLoop;
 
+    public GameObject[] collectives;
     void Start() {
         loopNum = 0;
         firstLoop = true;
@@ -28,6 +29,9 @@ public class LoopScript : MonoBehaviour
             transform.position = fallPos.position;
             loopNum++;
             loopIsTrue = true;
+            collectives[0].SetActive(true);
+            collectives[1].SetActive(true);
+            collectives[2].SetActive(true);
         }
     }
 }
