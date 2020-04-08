@@ -12,14 +12,23 @@ public class LoopScript : MonoBehaviour
     void Start() {
         loopNum = 0;
         firstLoop = true;
+        loopIsTrue = false;
     }
 
-    public bool loopIsTrue = false;
+    public bool loopIsTrue;
+    public vignette vScript;
+    public lensDistortion ldScript;
 
     void Update()
     {
+        Debug.Log("looping is" + loopIsTrue);
+
         if (loopIsTrue) {
+
+            vScript.increaseVignette = true;
+            ldScript.distort = true;
             loopIsTrue = false;
+          
         }
     }
 
@@ -34,4 +43,5 @@ public class LoopScript : MonoBehaviour
             collectives[2].SetActive(true);
         }
     }
+
 }

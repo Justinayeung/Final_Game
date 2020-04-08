@@ -14,8 +14,6 @@ public class lensDistortion : MonoBehaviour
 
     public bool distort;
 
-    public GameObject player;
-
     void Start()
     {
 
@@ -30,17 +28,14 @@ public class lensDistortion : MonoBehaviour
 
     void Update()
     {
-        //when a new loop starts --> distort == true
-        if (player.GetComponent<LoopScript>().loopIsTrue == true)
-        {
-            distort = true;
-        }
+        Debug.Log("lens distort is" + distort);
+        Debug.Log(lensD.intensity.value);
 
         if (distort)
         {
             // this setting distorts into a repeating circle thing when the value changes a lot
-            lensD.intensity.value += 2; 
-            lensD.scale.value -= 0.02f;
+            lensD.intensity.value += 5; 
+            lensD.scale.value -= 0.05f;
 
             distort = false;
         }
