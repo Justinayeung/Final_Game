@@ -9,6 +9,7 @@ TagManager:
   - Mat_Black
   - Mat_White
   - Loop_Col
+  - Loop_Col_Inverted
   layers:
   - Default
   - TransparentFX
