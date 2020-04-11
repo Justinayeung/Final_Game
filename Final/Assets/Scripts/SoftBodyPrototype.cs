@@ -284,8 +284,9 @@ public class SoftBodyPrototype : MonoBehaviour
 
         // Jump every few seconds, to keep the simulation lively
         
+        //have it jump on space?
         Vector3 jumpVelocity = new Vector3(0.0f, 0.0f, 0.0f);
-        if (LandedTime > 0.0f && Time.fixedTime - LandedTime >= JumpWait)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             jumpVelocity = Vector3.up * JumpSpeed;
             LandedTime = 0.0f;
