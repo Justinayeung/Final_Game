@@ -37,11 +37,9 @@ public class LoopScript : MonoBehaviour
         //Debug.Log("looping is" + loopIsTrue);
 
         if (loopIsTrue) {
-
             vScript.increaseVignette = true;
             ldScript.distort = true;
             loopIsTrue = false;
-          
         }
         /*
         if (rotateCam) {
@@ -54,10 +52,10 @@ public class LoopScript : MonoBehaviour
 
         if (invertedGravity)
         {
-            Physics.gravity = Vector3.up * 9.81f;
+            Physics.gravity = Vector3.up * 9.81f *2;
         }
         else {
-            Physics.gravity = Vector3.down * 9.81f;
+            Physics.gravity = Vector3.down * 9.81f *2;
         }
     }
 
