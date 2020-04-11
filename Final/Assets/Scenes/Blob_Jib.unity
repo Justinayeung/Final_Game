@@ -387,11 +387,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee4a57c08e47fe43b618632bf84ea42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PressureMultiplier: 20
-  SpringStiffness: 50
-  SpringDamping: 1.5
-  BounceCoefficient: 0.05
-  SlideCoefficient: 0.99
+  PressureMultiplier: 50
+  SpringStiffness: 80
+  SpringDamping: 5
+  BounceCoefficient: 0.02
+  SlideCoefficient: 0
   JumpSpeed: 0
   JumpWaitMin: 3
   JumpWaitMax: 4
@@ -420,7 +420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 855541022}
   - component: {fileID: 855541021}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,8 +712,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853623047}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.12, y: -3.9, z: 10.487347}
-  m_LocalScale: {x: 2.7124, y: 2.7124, z: 2.7124}
+  m_LocalPosition: {x: 4.12, y: -4.73, z: 10.487347}
+  m_LocalScale: {x: 2.7124, y: 0.69250286, z: 2.7124}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
