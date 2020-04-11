@@ -106,6 +106,13 @@ public class SoftBodyPrototype : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        InitializePointMassPositionsToBoundingBox();
+        InitializePointMassIndexesForBoundingBox();
+        //SaveSpringRestLengths();
+    }
+
     private void InitializePointMassPositionsToBoundingBox()
     {
         PointMassPositions[0] = transform.TransformPoint(new Vector3(.5f, .5f, .5f));
