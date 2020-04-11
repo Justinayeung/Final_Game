@@ -37,11 +37,9 @@ public class LoopScript : MonoBehaviour
         //Debug.Log("looping is" + loopIsTrue);
 
         if (loopIsTrue) {
-
             vScript.increaseVignette = true;
             ldScript.distort = true;
             loopIsTrue = false;
-          
         }
         /*
         if (rotateCam) {
