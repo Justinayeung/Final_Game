@@ -14,7 +14,7 @@ public class LoopScript : MonoBehaviour
     //Cinemachine.CinemachineVirtualCamera vcam;
 
     public GameObject[] collectives;
-    public bool rotateCam;
+    //public bool rotateCam;
     private bool invertedGravity;
     //private Rigidbody rb;
 
@@ -22,7 +22,7 @@ public class LoopScript : MonoBehaviour
         loopNum = 0;
         firstLoop = true;
         loopIsTrue = false;
-        rotateCam = false;
+        //rotateCam = false;
         invertedGravity = false;
         //rb = GetComponent<Rigidbody>();
         //vcam = cam.GetComponent<Cinemachine.CinemachineVirtualCamera>();
@@ -52,10 +52,10 @@ public class LoopScript : MonoBehaviour
 
         if (invertedGravity)
         {
-            Physics.gravity = Vector3.up * 9.81f *2;
+            Physics.gravity = Vector3.up * 9.81f * 2;
         }
         else {
-            Physics.gravity = Vector3.down * 9.81f *2;
+            Physics.gravity = Vector3.down * 9.81f * 2;
         }
     }
 
@@ -65,11 +65,11 @@ public class LoopScript : MonoBehaviour
             transform.position = fallPosInverted.position;
             loopNum++;
             loopIsTrue = true;
-            collectives[0].SetActive(true);
-            collectives[1].SetActive(true);
-            collectives[2].SetActive(true);
+            collectives[3].SetActive(true);
+            collectives[4].SetActive(true);
+            collectives[5].SetActive(true);
 
-            rotateCam = true;
+            //rotateCam = true;
             //invert the color of the whole world
             invertedGravity = true;
         }
@@ -78,6 +78,9 @@ public class LoopScript : MonoBehaviour
             loopIsTrue = true;
             transform.position = fallPos.position;
             invertedGravity = false;
+            collectives[0].SetActive(true);
+            collectives[1].SetActive(true);
+            collectives[2].SetActive(true);
         }
     }
 

@@ -11,16 +11,7 @@ public class PlayerCollecting : MonoBehaviour
 
     public AudioSource _audio;
     public AudioClip cSound;
-    void Start()
-    {
-        InvokeRepeating("SpawningCube", 10f, 5f);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -30,6 +21,12 @@ public class PlayerCollecting : MonoBehaviour
             StartCoroutine(CubeGettingBiggerAnim());
             _audio.pitch = 0.8f;
             _audio.PlayOneShot(cSound);                     
+        }
+
+        if (other.gameObject.CompareTag("Maggot")) {
+            other.gameObject.SetActive(false);
+            SpawningCube();
+
         }
     }
 
@@ -46,12 +43,6 @@ public class PlayerCollecting : MonoBehaviour
                                                            gameObject.transform.localScale.z * 0.3f);
 
         yield return new WaitForSeconds(0.5f);
-        /*
-        gameObject.transform.localScale -= new Vector3(gameObject.transform.localScale.x * 0.23f,
-                                                           gameObject.transform.localScale.y * 0.23f,
-                                                           gameObject.transform.localScale.z * 0.23f);
-                                                           */
-
     }
 
     IEnumerator CubeGettingSmallerAnim()
@@ -60,11 +51,5 @@ public class PlayerCollecting : MonoBehaviour
                                                            gameObject.transform.localScale.y * 0.25f,
                                                            gameObject.transform.localScale.z * 0.25f);
         yield return new WaitForSeconds(0.5f);
-        /*
-        gameObject.transform.localScale += new Vector3(gameObject.transform.localScale.x * 0.25f,
-                                                           gameObject.transform.localScale.y * 0.25f,
-                                                           gameObject.transform.localScale.z * 0.25f);
-                                                           */
-
     }
 }

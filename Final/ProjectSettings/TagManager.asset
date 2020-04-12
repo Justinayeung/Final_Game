@@ -10,6 +10,7 @@ TagManager:
   - Mat_White
   - Loop_Col
   - Loop_Col_Inverted
+  - Maggot
   layers:
   - Default
   - TransparentFX
