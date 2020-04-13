@@ -30,7 +30,7 @@ public class vignette : MonoBehaviour
 
         if (increaseVignette)
         {
-            vign.intensity.value += 0.1f;
+            vign.intensity.value += 0.12f * Time.deltaTime;
 
             increaseVignette = false;
         }
