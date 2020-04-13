@@ -12,12 +12,16 @@ public class vignette : MonoBehaviour
 
     public bool increaseVignette;
 
+    float incrValue;
+
     void Start()
     {
         v = GetComponent<CinemachinePostProcessing>();
         v.m_Profile.TryGetSettings<Vignette>(out vign);
         vign.intensity.value = 0;
         increaseVignette = false;
+
+        incrValue = 0.12f;
     }
 
     
@@ -30,9 +34,14 @@ public class vignette : MonoBehaviour
 
         if (increaseVignette)
         {
-            vign.intensity.value += 0.1f;
+            vign.intensity.value += incrValue;
 
             increaseVignette = false;
+        }
+
+        if (incrValue > 0.36f)
+        {
+            incrValue = 0.05f;
         }
     }
 }
