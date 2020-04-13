@@ -11,6 +11,7 @@ TagManager:
   - Loop_Col
   - Loop_Col_Inverted
   - Maggot
+  - Mag_Hall
   layers:
   - Default
   - TransparentFX
