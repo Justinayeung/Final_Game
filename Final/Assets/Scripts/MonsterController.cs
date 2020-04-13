@@ -20,7 +20,7 @@ public class MonsterController : MonoBehaviour
     // Update is called once per frame
     void Update() {
 
-        if (loop.loopNum >= 1 || spawned) { //loopNum is >= 1, agent will start moving towards player
+        if (loop.loopNum > 2 || spawned) { //loopNum is >= 1, agent will start moving towards player
             monster.SetActive(true);
             agent.SetDestination(player.position);
         }
