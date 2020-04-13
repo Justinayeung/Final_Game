@@ -75,7 +75,7 @@ public class LoopScript : MonoBehaviour
         }
 
         if (other.CompareTag("Loop_Col_Inverted")) {
-            loopIsTrue = true;
+            //loopIsTrue = true;
             transform.position = fallPos.position;
             invertedGravity = false;
             collectives[0].SetActive(true);
