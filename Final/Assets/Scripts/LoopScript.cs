@@ -81,6 +81,7 @@ public class LoopScript : MonoBehaviour
             collectives[0].SetActive(true);
             collectives[1].SetActive(true);
             collectives[2].SetActive(true);
+            loopNum++;
         }
     }
 
