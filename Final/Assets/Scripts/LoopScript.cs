@@ -15,6 +15,10 @@ public class LoopScript : MonoBehaviour
 
     public bool rotateCam;
 
+    public bool loopIsTrue;
+    //public vignette vScript;
+    //public lensDistortion ldScript;
+
     void Start() {
         loopNum = 0;
         firstLoop = true;
@@ -22,10 +26,6 @@ public class LoopScript : MonoBehaviour
         rotateCam = false;
         camOff = cam.GetComponent<CinemachineCameraOffset>();
     }
-
-    public bool loopIsTrue;
-    //public vignette vScript;
-    //public lensDistortion ldScript;
 
     void Update()
     {
@@ -53,15 +53,8 @@ public class LoopScript : MonoBehaviour
             firstLoop = false;
             loopNum++;
             transform.position = fallPos.position;
-<<<<<<< HEAD
             rotateCam = !rotateCam;
-=======
-            invertedGravity = false;
-            collectives[0].SetActive(true);
-            collectives[1].SetActive(true);
-            collectives[2].SetActive(true);
             loopNum++;
->>>>>>> 0bcd2690b8fdd646b50989b4072ae8ec868598a7
         }
     }
 
