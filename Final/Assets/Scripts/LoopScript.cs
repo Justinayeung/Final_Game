@@ -53,7 +53,15 @@ public class LoopScript : MonoBehaviour
             firstLoop = false;
             loopNum++;
             transform.position = fallPos.position;
+<<<<<<< HEAD
             rotateCam = !rotateCam;
+=======
+            invertedGravity = false;
+            collectives[0].SetActive(true);
+            collectives[1].SetActive(true);
+            collectives[2].SetActive(true);
+            loopNum++;
+>>>>>>> 0bcd2690b8fdd646b50989b4072ae8ec868598a7
         }
     }
 
