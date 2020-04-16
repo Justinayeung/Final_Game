@@ -15,6 +15,10 @@ public class LoopScript : MonoBehaviour
 
     public bool rotateCam;
 
+    public bool loopIsTrue;
+    //public vignette vScript;
+    //public lensDistortion ldScript;
+
     void Start() {
         loopNum = 0;
         firstLoop = true;
@@ -22,10 +26,6 @@ public class LoopScript : MonoBehaviour
         rotateCam = false;
         camOff = cam.GetComponent<CinemachineCameraOffset>();
     }
-
-    public bool loopIsTrue;
-    //public vignette vScript;
-    //public lensDistortion ldScript;
 
     void Update()
     {
