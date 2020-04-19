@@ -35,6 +35,13 @@ public class PlayerMovement : MonoBehaviour
                 //move left
                 rb.velocity = -Vector3.right * speed;
             }
+            if (Input.GetKey(KeyCode.W)) {
+                rb.velocity = Vector3.forward * speed;
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                rb.velocity = -Vector3.forward * speed;
+            }
         }
         else {
             float moveHorizontal = Input.GetAxisRaw("Horizontal");
@@ -48,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
     void PlaySound()
     {
-        if(Input.GetButton("Vertical")|| Input.GetButton("Horizontal"))
+        if(Input.GetButton("Vertical")|| Input.GetButton("Horizontal") || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
         {
            _audio.pitch = Random.Range(.85f, 1.15f);
            _audio.PlayOneShot(walkSound);

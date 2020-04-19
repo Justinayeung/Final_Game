@@ -16,8 +16,8 @@ public class LoopScript : MonoBehaviour
     public bool rotateCam;
 
     public bool loopIsTrue;
-    //public vignette vScript;
-    //public lensDistortion ldScript;
+    public vignette vScript;
+    public lensDistortion ldScript;
 
     void Start() {
         loopNum = 0;
@@ -31,20 +31,20 @@ public class LoopScript : MonoBehaviour
     {
 
         if (loopIsTrue) {
-            //vScript.increaseVignette = true;
-            //ldScript.distort = true;
+            vScript.increaseVignette = true;
+            ldScript.distort = true;
             loopIsTrue = false;
         }
 
         if (rotateCam)
         {
             //rotate the camera on Z-axis 180 degrees           
-            cam.transform.rotation = Quaternion.Euler(12.399f, -9.892f, 180);
-            camOff.m_Offset = new Vector3(-3.97f, -0.27f, 0);
+            cam.transform.rotation = Quaternion.Euler(11f, 0, 180);
+            camOff.m_Offset = new Vector3(-2.3f, -1f, 1);
         }
         else {
-            cam.transform.rotation = Quaternion.Euler(12.399f, 9.892f, 0);
-            camOff.m_Offset = new Vector3(4.02f, 0.31f, 0);
+            cam.transform.rotation = Quaternion.Euler(11f, 0, 0);
+            camOff.m_Offset = new Vector3(2.3f, 1f, 1);
         }
     }
 
