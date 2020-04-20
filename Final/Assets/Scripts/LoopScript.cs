@@ -41,7 +41,7 @@ public class LoopScript : MonoBehaviour
         {
             //rotate the camera on Z-axis 180 degrees           
             cam.transform.rotation = Quaternion.Euler(-12f, 1f, 180);
-            camOff.m_Offset = new Vector3(-2.3f, 1f, 1);
+            camOff.m_Offset = new Vector3(2.3f, 5f, 1);
             Physics.gravity = new Vector3(0, 9.81F, 0);
         }
         else {
@@ -53,17 +53,17 @@ public class LoopScript : MonoBehaviour
 
     public void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Loop_Col")) { //If player hits the trigger for looping
+            rotateCam = true;
             firstLoop = false;
             transform.position = fallPosInvert.position;
-            rotateCam = true;
             loopIsTrue = true;
             loopNum++;
         }
 
         if (other.CompareTag("Loop_Col_Invert"))
-        { 
-            transform.position = fallPos.position;
+        {
             rotateCam = false;
+            transform.position = fallPos.position;
             loopIsTrue = true;
             loopNum++;
         }
