@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (inverted.rotateCam)
         {
             if (Input.GetKey(KeyCode.A))
@@ -50,7 +51,14 @@ public class PlayerMovement : MonoBehaviour
             Vector3 movement = new Vector3(moveHorizontal * speed, rb.velocity.y, moveVertical * speed);
             rb.velocity = movement;
         }
- 
+        */
+
+        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        float moveVertical = Input.GetAxisRaw("Vertical");
+
+        Vector3 movement = new Vector3(moveHorizontal * speed, rb.velocity.y, moveVertical * speed);
+        rb.velocity = movement;
+
     }
 
     void PlaySound()
