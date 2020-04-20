@@ -55,8 +55,8 @@ public class LoopScript : MonoBehaviour
             firstLoop = false;
             transform.position = fallPos.position;
             rotateCam = !rotateCam;
-            loopNum++;
             loopIsTrue = true;
+            loopNum++;
         }
     }
 
