@@ -51,7 +51,7 @@ public class LoopScript : MonoBehaviour
     public void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Loop_Col")) { //If player hits the trigger for looping
             firstLoop = false;
-            loopNum++;
+            loopIsTrue = true;
             transform.position = fallPos.position;
             rotateCam = !rotateCam;
             loopNum++;
