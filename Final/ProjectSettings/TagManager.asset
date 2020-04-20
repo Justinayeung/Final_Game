@@ -12,6 +12,8 @@ TagManager:
   - Collectable
   - Maggot
   - Loop_Col_Invert
+  - Plat_Black
+  - Plat_White
   layers:
   - Default
   - TransparentFX

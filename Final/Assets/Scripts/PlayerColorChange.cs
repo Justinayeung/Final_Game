@@ -12,7 +12,16 @@ public class PlayerColorChange : MonoBehaviour
         mesh = GetComponent<MeshRenderer>();
     }
 
-    public void OnTriggerEnter(Collider other) {
+    public void OnTriggerStay(Collider other) {
+        if (other.CompareTag("Plat_Black")) { //If player is on the tag Mat_Black change player to white
+            mesh.material = White;
+        }
+        if (other.CompareTag("Plat_White")) { //If player is on the tag Mat_White change player to black
+            mesh.material = Black;
+        }
+    }
+
+    public void OnTriggerEnter(Collider other){
         if (other.CompareTag("Mat_Black")) { //If player is on the tag Mat_Black change player to white
             mesh.material = White;
         }
