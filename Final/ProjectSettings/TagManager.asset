@@ -9,6 +9,9 @@ TagManager:
   - Mat_White
   - Loop_Col
   - Mag_Hall
+  - Collectable
+  - Maggot
+  - Loop_Col_Invert
   layers:
   - Default
   - TransparentFX

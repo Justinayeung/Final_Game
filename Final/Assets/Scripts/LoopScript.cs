@@ -6,6 +6,7 @@ using Cinemachine;
 public class LoopScript : MonoBehaviour
 {
     public Transform fallPos;
+    public Transform fallPosInvert;
 
     public int loopNum;
     public bool firstLoop;
@@ -53,8 +54,16 @@ public class LoopScript : MonoBehaviour
     public void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Loop_Col")) { //If player hits the trigger for looping
             firstLoop = false;
+            transform.position = fallPosInvert.position;
+            rotateCam = true;
+            loopIsTrue = true;
+            loopNum++;
+        }
+
+        if (other.CompareTag("Loop_Col_Invert"))
+        { 
             transform.position = fallPos.position;
-            rotateCam = !rotateCam;
+            rotateCam = false;
             loopIsTrue = true;
             loopNum++;
         }
