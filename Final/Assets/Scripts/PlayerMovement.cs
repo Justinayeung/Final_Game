@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Variables")]
     public float speed;
-    Vector3 movement;
-    Rigidbody rb;
+    public float fallMultiplier = 2.5f;
+    public float lowJumpMultiplier = 2f;
+    [Range(1, 10)]
+    public float jumpVelocity;
+    bool canJump;
 
+    [Header("References")]
     public AudioSource _audio;
     public AudioClip walkSound;
-
     public LoopScript inverted;
+    Vector3 movement;
+    Rigidbody rb;
 
     void Start()
     {
@@ -59,6 +65,19 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal * speed, rb.velocity.y, moveVertical * speed);
         rb.velocity = movement;
 
+        //Jump
+        if (canJump) {
+            if (Input.GetButtonDown("Jump")) {
+                rb.velocity = Vector3.up * jumpVelocity; //Add velocity upwards
+            }
+        }
+
+        //Faster Falling
+        if (rb.velocity.y < 0){ //If vertical motion is less then 0 (falling)
+            rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime; //Apply fall multiplier
+        } else if (rb.velocity.y > 0 && !Input.GetButton("Jump")) { //If jumping and if button not held = low jump
+            rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
     }
 
     void PlaySound()
@@ -67,6 +86,18 @@ public class PlayerMovement : MonoBehaviour
         {
            _audio.pitch = Random.Range(.85f, 1.15f);
            _audio.PlayOneShot(walkSound);
+        }
+    }
+
+    private void OnCollisionEnter(Collision other) { //If on ground, canJump = true
+        if (other.gameObject.CompareTag("Mat_Black") || other.gameObject.CompareTag("Plat_Black") || other.gameObject.CompareTag("Mat_White") || other.gameObject.CompareTag("Plat_White")) {
+            canJump = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision other) { //If off ground, canJump = false
+        if (other.gameObject.CompareTag("Mat_Black") || other.gameObject.CompareTag("Plat_Black") || other.gameObject.CompareTag("Mat_White") || other.gameObject.CompareTag("Plat_White")) {
+            canJump = false;
         }
     }
 }
