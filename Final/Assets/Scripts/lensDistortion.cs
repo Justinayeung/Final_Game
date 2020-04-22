@@ -40,5 +40,10 @@ public class lensDistortion : MonoBehaviour
             distort = false;
         }
 
+        if (lensD.intensity.value > 90)
+        {
+            lensD.intensity.value = 90;
+        }
+
     }
 }

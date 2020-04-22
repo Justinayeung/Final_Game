@@ -41,7 +41,7 @@ public class vignette : MonoBehaviour
 
         if (incrValue > 0.36f)
         {
-            incrValue = 0.05f;
+            incrValue = 0.04f;
         }
     }
 }
