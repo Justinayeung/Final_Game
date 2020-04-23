@@ -90,13 +90,13 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) { //If on ground, canJump = true
-        if (other.gameObject.CompareTag("Mat_Black") || other.gameObject.CompareTag("Plat_Black") || other.gameObject.CompareTag("Mat_White") || other.gameObject.CompareTag("Plat_White")) {
+        if (other.gameObject.CompareTag("Plat_Black")|| other.gameObject.CompareTag("Plat_White") || other.gameObject.CompareTag("Ground")) {
             canJump = true;
         }
     }
 
     private void OnCollisionExit(Collision other) { //If off ground, canJump = false
-        if (other.gameObject.CompareTag("Mat_Black") || other.gameObject.CompareTag("Plat_Black") || other.gameObject.CompareTag("Mat_White") || other.gameObject.CompareTag("Plat_White")) {
+        if (other.gameObject.CompareTag("Plat_Black") || other.gameObject.CompareTag("Plat_White") || other.gameObject.CompareTag("Ground")) {
             canJump = false;
         }
     }
