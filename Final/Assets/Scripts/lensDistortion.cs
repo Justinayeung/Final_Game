@@ -28,8 +28,8 @@ public class lensDistortion : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("lens distort is" + distort);
-        Debug.Log(lensD.intensity.value);
+        //Debug.Log("lens distort is" + distort);
+        //Debug.Log(lensD.intensity.value);
 
         if (distort)
         {

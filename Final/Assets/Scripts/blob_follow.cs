@@ -9,21 +9,24 @@ public class blob_follow : MonoBehaviour
     public Transform player;
     LoopScript loop;
     Animator anim;
+    AudioSource aud;
 
     void Start()
     {
         loop = FindObjectOfType<LoopScript>();
         anim = gameObject.GetComponent<Animator>();
+        aud = gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        Debug.Log(loop.loopNum);
+       // Debug.Log(loop.loopNum);
 
-        if (loop.loopNum > 1)
+        if (loop.loopNum > 3)
         { 
             agent.SetDestination(player.position);
             anim.SetBool("follow", true);
+            aud.Play();
         }
     }
 }
