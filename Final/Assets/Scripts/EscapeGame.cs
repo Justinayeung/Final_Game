@@ -16,6 +16,7 @@ public class EscapeGame : MonoBehaviour
         if (Input.GetKey("escape"))
         {
             Application.Quit();
+            Debug.Log("quit");
         }
     }
     private void OnTriggerEnter(Collider other)
