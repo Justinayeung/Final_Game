@@ -20,13 +20,6 @@ public class blob_follow : MonoBehaviour
 
     void Update()
     {
-       // Debug.Log(loop.loopNum);
-
-        if (aud.isPlaying == true)
-        {
-            Debug.Log("playing gross sounds");
-        }
-
         if (loop.loopNum > 3)
         { 
             agent.SetDestination(player.position);
