@@ -22,6 +22,11 @@ public class blob_follow : MonoBehaviour
     {
        // Debug.Log(loop.loopNum);
 
+        if (aud.isPlaying == true)
+        {
+            Debug.Log("playing");
+        }
+
         if (loop.loopNum > 3)
         { 
             agent.SetDestination(player.position);
