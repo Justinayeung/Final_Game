@@ -17,7 +17,6 @@ public class MaggotScript : MonoBehaviour
         waitTime = Random.Range(1f, 5f);
 
         maggotSound = GetComponent<AudioSource>();
-        maggotSound.enabled = false;
     }
 
     // Update is called once per frame
