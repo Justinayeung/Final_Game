@@ -24,7 +24,7 @@ public class blob_follow : MonoBehaviour
 
         if (aud.isPlaying == true)
         {
-            Debug.Log("playing");
+            Debug.Log("playing gross sounds");
         }
 
         if (loop.loopNum > 3)
