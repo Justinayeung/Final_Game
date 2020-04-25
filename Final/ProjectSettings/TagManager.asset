@@ -15,6 +15,7 @@ TagManager:
   - Plat_Black
   - Plat_White
   - BounceCube
+  - SpiderWeb
   layers:
   - Default
   - TransparentFX
