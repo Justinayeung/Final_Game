@@ -6,17 +6,36 @@ public class MaggotScript : MonoBehaviour
 {
     private float waitTime;
     public Animator anim;
-    // Start is called before the first frame update
+
+    //public AudioSource maggotSound;
+    //public GameObject player;
+    //public float distToMaggot;
+
     void Start()
     {
         anim = GetComponent<Animator>();
         waitTime = Random.Range(1f, 5f);
+
+       // maggotSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         StartCoroutine(States());
+        /*
+        distToMaggot = Vector3.Distance(transform.position, player.transform.position);
+
+        if (distToMaggot <= 4)
+        {
+            maggotSound.Play();
+        }
+
+        if (distToMaggot > 4)
+        {
+            maggotSound.Stop();
+        }
+        */
     }
     IEnumerator States() {
         yield return new WaitForSeconds(waitTime);
