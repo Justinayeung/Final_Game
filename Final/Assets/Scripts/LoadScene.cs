@@ -2,30 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class LoadScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    public Animator transition;
+    public Image fadeIm;
+   
     void Update()
     {
         
     }
 
-    private void OnTriggerEnter(Collider other)
+     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Main 1");
+
+            StartCoroutine(LoadingScene(SceneManager.GetActiveScene().buildIndex + 1));
+
+
         }
        }
 
     public void loadGame()
     {
-        SceneManager.LoadScene("Main 1");
+
+        StartCoroutine(LoadingScene(SceneManager.GetActiveScene().buildIndex + 1));
+
     }
+
+    IEnumerator LoadingScene(int levelIndex)
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(.2f);
+        SceneManager.LoadScene(levelIndex);
+
+
+    }
+
+   
+
 }
