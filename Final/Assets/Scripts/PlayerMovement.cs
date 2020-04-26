@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void OnTriggerExit(Collider other) {
-        if (other.CompareTag("SpiderWeb")) { //Check if player is in spider web
+        if (other.CompareTag("SpiderWeb")) { //Check if player is not in spider web
             inWeb = false;
         }
     }

@@ -27,8 +27,10 @@ public class ChangeManager : MonoBehaviour
     /// <param name="loopNumber"></param>
     public void LoopChanges(int loopNumber) {
         if (loop.firstLoop == false) { //Do everything only if the player has gone through the loop first
-            _ChangeObjs[loopNumber - 1].SetActive(true);
-            _OriginalObjs[loopNumber - 1].SetActive(false);
+            if (loopNumber - 1 < _ChangeObjs.Count) { //If loop number is less than the amount in the list
+                _ChangeObjs[loopNumber - 1].SetActive(true);
+                _OriginalObjs[loopNumber - 1].SetActive(false);
+            }
         }
     }
 }
