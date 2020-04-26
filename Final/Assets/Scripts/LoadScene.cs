@@ -35,10 +35,8 @@ public class LoadScene : MonoBehaviour
     IEnumerator LoadingScene(int levelIndex)
     {
         transition.SetTrigger("Start");
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitUntil(() => fadeIm.color.a == 1); //Wait until image is fully black/can be seen
         SceneManager.LoadScene(levelIndex);
-
-
     }
 
    
