@@ -27,4 +27,10 @@ public class EscapeGame : MonoBehaviour
             Debug.Log("quit");
         }
     }
+
+    public void exitGame()
+    {
+        Application.Quit();
+        Debug.Log("quit");
+    }
 }

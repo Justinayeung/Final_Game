@@ -23,4 +23,9 @@ public class LoadScene : MonoBehaviour
             SceneManager.LoadScene("Main 1");
         }
        }
+
+    public void loadGame()
+    {
+        SceneManager.LoadScene("Main 1");
+    }
 }

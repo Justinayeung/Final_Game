@@ -1,0 +1,331 @@
+fileFormatVersion: 2
+guid: 5124d7a7dc3555649a9836179e3a8e53
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8184523286563453084
+    second: paradoxSpriteSheet_0
+  - first:
+      213: 7031621255781727275
+    second: paradoxSpriteSheet_1
+  - first:
+      213: 5985452802393014020
+    second: paradoxSpriteSheet_2
+  - first:
+      213: 3438085333569990625
+    second: paradoxSpriteSheet_3
+  - first:
+      213: -8330223922849101286
+    second: paradoxSpriteSheet_4
+  - first:
+      213: -2743634796680260981
+    second: paradoxSpriteSheet_5
+  - first:
+      213: 8184320324647799429
+    second: paradoxSpriteSheet_6
+  - first:
+      213: 532288723539019477
+    second: paradoxSpriteSheet_7
+  - first:
+      213: 5866873915962731927
+    second: paradoxSpriteSheet_8
+  - first:
+      213: -2632493987886415527
+    second: paradoxSpriteSheet_9
+  - first:
+      213: 1046097012538202106
+    second: paradoxSpriteSheet_10
+  - first:
+      213: 4798967497522332232
+    second: paradoxSpriteSheet_11
+  - first:
+      213: -9038832263347931688
+    second: paradoxSpriteSheet_12
+  - first:
+      213: -7724677078105948789
+    second: paradoxSpriteSheet_13
+  - first:
+      213: 5256220967662565545
+    second: paradoxSpriteSheet_14
+  - first:
+      213: 7518633287641129863
+    second: paradoxSpriteSheet_15
+  - first:
+      213: 1497976456500783830
+    second: paradoxSpriteSheet_16
+  - first:
+      213: -6269101400017913233
+    second: paradoxSpriteSheet_17
+  - first:
+      213: -497304766553635081
+    second: paradoxSpriteSheet_18
+  - first:
+      213: -4044081104916620398
+    second: paradoxSpriteSheet_19
+  - first:
+      213: -6461836132103338093
+    second: paradoxSpriteSheet_20
+  - first:
+      213: 3790174230477186160
+    second: paradoxSpriteSheet_21
+  - first:
+      213: 2496956688890909793
+    second: paradoxSpriteSheet_22
+  - first:
+      213: 5132496563149946073
+    second: paradoxSpriteSheet_23
+  - first:
+      213: -1019007381003582374
+    second: paradoxSpriteSheet_24
+  - first:
+      213: -6174638189587353913
+    second: paradoxSpriteSheet_25
+  - first:
+      213: 6371928119991882534
+    second: paradoxSpriteSheet_26
+  - first:
+      213: 6130887658292966582
+    second: paradoxSpriteSheet_27
+  - first:
+      213: -4569753055263573130
+    second: paradoxSpriteSheet_28
+  - first:
+      213: 7555209743980444117
+    second: paradoxSpriteSheet_29
+  - first:
+      213: -3182142262823461366
+    second: paradoxSpriteSheet_30
+  - first:
+      213: 1034297650794409335
+    second: paradoxSpriteSheet_31
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: paradoxSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 51
+        width: 827
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46709703f6bba6e80800000000000000
+      internalID: -8184523286563453084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paradoxSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 21
+        width: 891
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2cb4f9e646559160800000000000000
+      internalID: 7031621255781727275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paradoxSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 0
+        width: 874
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f708a8c99901350800000000000000
+      internalID: 5985452802393014020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paradoxSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 3448
+        y: 27
+        width: 835
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef6be6256886bf20800000000000000
+      internalID: 3438085333569990625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e05fe27bdc1909c4797e18afa2ba2dca
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
