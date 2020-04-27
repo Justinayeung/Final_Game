@@ -41,7 +41,12 @@ public class vignette : MonoBehaviour
 
         if (incrValue > 0.36f)
         {
-            incrValue = 0.04f;
+            incrValue = 0.02f;
+        }
+
+        if (vign.intensity.value > 0.75f)
+        {
+            vign.intensity.value = 0.75f;
         }
     }
 }

@@ -35,7 +35,7 @@ public class lensDistortion : MonoBehaviour
         {
             // this setting distorts into a repeating circle thing when the value changes a lot
             lensD.intensity.value += 5; 
-            lensD.scale.value -= 0.05f;
+            lensD.scale.value -= 0.06f;
 
             distort = false;
         }
