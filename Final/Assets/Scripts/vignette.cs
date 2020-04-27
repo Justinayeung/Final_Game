@@ -14,6 +14,8 @@ public class vignette : MonoBehaviour
 
     float incrValue;
 
+    LoopScript loop;
+
     void Start()
     {
         v = GetComponent<CinemachinePostProcessing>();
@@ -22,6 +24,8 @@ public class vignette : MonoBehaviour
         increaseVignette = false;
 
         incrValue = 0.12f;
+
+        loop = FindObjectOfType<LoopScript>();
     }
 
     
@@ -32,21 +36,26 @@ public class vignette : MonoBehaviour
         //Debug.Log("vignette is" + increaseVignette);
         //Debug.Log(vign.intensity.value);
 
-        if (increaseVignette)
+        if (loop.loopNum > 8)
         {
-            vign.intensity.value += incrValue;
 
-            increaseVignette = false;
-        }
+            if (increaseVignette)
+            {
+                vign.intensity.value += incrValue;
 
-        if (incrValue > 0.36f)
-        {
-            incrValue = 0.02f;
-        }
+                increaseVignette = false;
+            }
 
-        if (vign.intensity.value > 0.75f)
-        {
-            vign.intensity.value = 0.75f;
+            if (incrValue > 0.36f)
+            {
+                incrValue = 0.03f;
+            }
+
+            if (vign.intensity.value > 0.7f)
+            {
+                vign.intensity.value = 0.7f;
+            }
+
         }
     }
 }
