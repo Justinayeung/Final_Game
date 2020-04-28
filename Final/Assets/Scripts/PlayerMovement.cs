@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (inWeb) { //If in spider web slow down
-            speed = 3f;
+            speed = 4f;
         } else {
             speed = 8f;
         }
