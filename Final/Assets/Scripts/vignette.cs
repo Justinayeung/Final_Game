@@ -23,7 +23,7 @@ public class vignette : MonoBehaviour
         vign.intensity.value = 0;
         increaseVignette = false;
 
-        incrValue = 0.12f;
+        incrValue = 0.1f;
 
         loop = FindObjectOfType<LoopScript>();
     }
@@ -46,14 +46,14 @@ public class vignette : MonoBehaviour
                 increaseVignette = false;
             }
 
-            if (incrValue > 0.36f)
+            if (incrValue > 0.3f)
             {
                 incrValue = 0.03f;
             }
 
-            if (vign.intensity.value > 0.7f)
+            if (vign.intensity.value > 0.48f)
             {
-                vign.intensity.value = 0.7f;
+                vign.intensity.value = 0.48f;
             }
 
         }
