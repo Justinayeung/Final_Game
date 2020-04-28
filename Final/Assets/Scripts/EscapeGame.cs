@@ -13,24 +13,26 @@ public class EscapeGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetKey("escape"))
         {
             Application.Quit();
             Debug.Log("quit");
         }
+        
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             Application.Quit();
-            Debug.Log("quit");
+            //Debug.Log("quit");
         }
     }
 
     public void exitGame()
     {
         Application.Quit();
-        Debug.Log("quit");
+        //Debug.Log("quit");
     }
 }
