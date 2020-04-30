@@ -59,6 +59,7 @@ public class LoopScript : MonoBehaviour
         if (loopNum >= 14)
         {
             StartCoroutine(LoadingScene(0));
+            Physics.gravity = new Vector3(0, -0.1F, 0);
         }
     }
 
