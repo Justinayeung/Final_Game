@@ -16,6 +16,7 @@ TagManager:
   - Plat_White
   - BounceCube
   - SpiderWeb
+  - EndingCollider
   layers:
   - Default
   - TransparentFX
