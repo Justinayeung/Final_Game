@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoopScript : MonoBehaviour
 {
@@ -19,6 +21,9 @@ public class LoopScript : MonoBehaviour
     public bool loopIsTrue;
     public vignette vScript;
     public lensDistortion ldScript;
+
+    public Animator transition;
+    public Image fadeIm;
 
     void Start() {
         loopNum = 0;
@@ -42,13 +47,18 @@ public class LoopScript : MonoBehaviour
             //rotate the camera on Z-axis 180 degrees           
             //cam.transform.rotation = Quaternion.Euler(-12f, 1f, 180);
             cam.transform.rotation = Quaternion.Euler(-10f, 1f, 0);
-            camOff.m_Offset = new Vector3(-2.3f, -5f, 1);
+            camOff.m_Offset = new Vector3(-2.3f, -3f, 1f);
             Physics.gravity = new Vector3(0, 9.81F, 0);
         }
         else {
             cam.transform.rotation = Quaternion.Euler(12f, 1f, 0);
-            camOff.m_Offset = new Vector3(2.3f, 1f, 1);
+            camOff.m_Offset = new Vector3(2.3f, 1f, 1f);
             Physics.gravity = new Vector3(0, -9.81F, 0);
+        }
+
+        if (loopNum >= 14)
+        {
+            StartCoroutine(LoadingScene(0));
         }
     }
 
@@ -68,6 +78,13 @@ public class LoopScript : MonoBehaviour
             loopIsTrue = true;
             loopNum++;
         }
+    }
+
+    IEnumerator LoadingScene(int levelIndex)
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitUntil(() => fadeIm.color.a == 1); //Wait until image is fully black/can be seen
+        SceneManager.LoadScene(levelIndex);
     }
 
 }

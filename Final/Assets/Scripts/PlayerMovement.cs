@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         InvokeRepeating("PlaySound", 0.0f, 0.5f);
         loopScript = GetComponent<LoopScript>();
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -81,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (inWeb) { //If in spider web slow down
-            speed = 3f;
+            speed = 4f;
         } else {
             speed = 8f;
         }

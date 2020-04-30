@@ -443,7 +443,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.71500003, y: 0.34}
   m_AnchorMax: {x: 0.71500003, y: 0.37}
-  m_AnchoredPosition: {x: 30.398758, y: -0.9156189}
+  m_AnchoredPosition: {x: 30.398682, y: -0.9156494}
   m_SizeDelta: {x: 160, y: 24.499763}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &351284959
@@ -994,7 +994,7 @@ GameObject:
   - component: {fileID: 654787962}
   - component: {fileID: 654787963}
   m_Layer: 0
-  m_Name: scape
+  m_Name: escape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1561,7 +1561,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.18, y: 0.35}
   m_AnchorMax: {x: 0.2, y: 0.41}
-  m_AnchoredPosition: {x: -19.411255, y: 4.3950043}
+  m_AnchoredPosition: {x: -19.411133, y: 4.3950195}
   m_SizeDelta: {x: 154.14, y: 18.99952}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1313805289
