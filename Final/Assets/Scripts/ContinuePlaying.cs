@@ -13,7 +13,7 @@ public class ContinuePlaying : MonoBehaviour
         if (other.gameObject.CompareTag("Player")) {
             MainCam.SetActive(true);
             CMCam.SetActive(true);
-            player.transform.position = new Vector3(1096.5f, 1f, 0f);
+            player.transform.position = new Vector3(1438.9f, 1f, 0f);
             QuitArea.SetActive(false);
         }
     }
