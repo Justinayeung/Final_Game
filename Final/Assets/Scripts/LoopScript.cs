@@ -71,7 +71,7 @@ public class LoopScript : MonoBehaviour
             StartCoroutine(LoadingScene(0));
         }
         */
-        if (loopNum == 13)
+        if (loopNum >= 12)
         {
             loopCol.SetActive(false);
             endingCol.SetActive(true);
@@ -109,9 +109,10 @@ public class LoopScript : MonoBehaviour
 
     IEnumerator LoadingScene(int levelIndex)
     {
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(17f);
         transition.SetTrigger("Start");
         Physics.gravity = new Vector3(0, -9.81F, 0);
+        yield return new WaitForSeconds(3f);
         yield return new WaitUntil(() => fadeIm.color.a == 1); //Wait until image is fully black/can be seen
         SceneManager.LoadScene(levelIndex);
     }
