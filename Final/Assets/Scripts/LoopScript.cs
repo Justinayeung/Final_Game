@@ -43,7 +43,7 @@ public class LoopScript : MonoBehaviour
 
     void Update()
     {
-
+        FallLocationUpdate();
         if (loopIsTrue)
         {
             vScript.increaseVignette = true;
@@ -86,7 +86,7 @@ public class LoopScript : MonoBehaviour
         }
     }
 
-        public void OnTriggerEnter(Collider other) {
+    public void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Loop_Col")) { //If player hits the trigger for looping
             rotateCam = true;
             firstLoop = false;
@@ -95,13 +95,13 @@ public class LoopScript : MonoBehaviour
             loopNum++;
         }
 
-        if (other.CompareTag("Loop_Col_Invert"))
-        {
+        if (other.CompareTag("Loop_Col_Invert")) {
             rotateCam = false;
             transform.position = fallPos.position;
             loopIsTrue = true;
             loopNum++;
         }
+
         if (other.CompareTag("EndingCollider")) {
             endingCamOffset = true;
         }
@@ -117,4 +117,11 @@ public class LoopScript : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 
+    public void FallLocationUpdate() {
+        if (loopNum <= 4) {
+            fallPos.position = new Vector3(4f, 3f, 3f);
+        } else if (loopNum >= 5) {
+            fallPos.position = new Vector3(-56f, -6f, 3f);
+        }
+    }
 }
