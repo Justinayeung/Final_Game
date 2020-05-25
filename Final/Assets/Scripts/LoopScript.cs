@@ -123,5 +123,11 @@ public class LoopScript : MonoBehaviour
         } else if (loopNum >= 5) {
             fallPos.position = new Vector3(-56f, -6f, 3f);
         }
+
+        if (loopNum <= 5) {
+            fallPosInvert.position = new Vector3(118f, 18f, 5f);
+        } else if (loopNum >= 6) {
+            fallPosInvert.position = new Vector3(200f, 25f, 5f);
+        }
     }
 }
