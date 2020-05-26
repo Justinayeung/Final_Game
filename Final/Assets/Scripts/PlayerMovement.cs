@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource _audio;
     public AudioClip walkSound;
     public LoopScript loopScript;
+    public bool CheckloopScript;
     Vector3 movement;
     Rigidbody rb;
 
@@ -40,14 +41,17 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal * speed, rb.velocity.y, moveVertical * speed);
         rb.velocity = movement;
 
-        if (loopScript.rotateCam)
-        {
-            rb.AddTorque(Vector3.forward * moveHorizontal * torqueAmt * Time.deltaTime, ForceMode.VelocityChange);
-            rb.AddTorque(-Vector3.right * moveVertical * torqueAmt * Time.deltaTime, ForceMode.VelocityChange);
-        }
-        else {
-            rb.AddTorque(-Vector3.forward * moveHorizontal * torqueAmt * Time.deltaTime, ForceMode.VelocityChange);
-            rb.AddTorque(Vector3.right * moveVertical * torqueAmt * Time.deltaTime, ForceMode.VelocityChange);
+        if (!CheckloopScript) {
+            if (loopScript.rotateCam)
+            {
+                rb.AddTorque(Vector3.forward * moveHorizontal * torqueAmt * Time.deltaTime, ForceMode.VelocityChange);
+                rb.AddTorque(-Vector3.right * moveVertical * torqueAmt * Time.deltaTime, ForceMode.VelocityChange);
+            }
+            else
+            {
+                rb.AddTorque(-Vector3.forward * moveHorizontal * torqueAmt * Time.deltaTime, ForceMode.VelocityChange);
+                rb.AddTorque(Vector3.right * moveVertical * torqueAmt * Time.deltaTime, ForceMode.VelocityChange);
+            }
         }
 
         //Jump
