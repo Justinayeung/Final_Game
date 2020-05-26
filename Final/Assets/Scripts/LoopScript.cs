@@ -55,15 +55,15 @@ public class LoopScript : MonoBehaviour
         {
             //rotate the camera on Z-axis 180 degrees           
             //cam.transform.rotation = Quaternion.Euler(-12f, 1f, 180);
-            cam.transform.rotation = Quaternion.Euler(-10f, 1f, 0);
-            camOff.m_Offset = new Vector3(-2.3f, -3f, 1f);
-            Physics.gravity = new Vector3(0, 9.81F, 0);
+            cam.transform.rotation = Quaternion.Euler(-10f, -1f, 0);
+            camOff.m_Offset = new Vector3(-2.3f, -5f, 1f);
+            Physics.gravity = new Vector3(0, 20F, 0);
         }
         else
         {
             cam.transform.rotation = Quaternion.Euler(12f, 1f, 0);
             camOff.m_Offset = new Vector3(2.3f, 1f, 1f);
-            Physics.gravity = new Vector3(0, -9.81F, 0);
+            Physics.gravity = new Vector3(0, -20F, 0);
         }
         /*
         if (loopNum >= 14)

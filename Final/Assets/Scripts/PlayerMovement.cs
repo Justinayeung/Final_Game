@@ -6,12 +6,15 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Variables")]
     public float speed;
+    public float originalSpeed;
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
+    public float torqueAmt;
     [Range(1, 10)]
     public float jumpVelocity;
     bool canJump;
     bool inWeb;
+
 
     [Header("References")]
     public AudioSource _audio;
@@ -26,46 +29,26 @@ public class PlayerMovement : MonoBehaviour
         InvokeRepeating("PlaySound", 0.0f, 0.5f);
         loopScript = GetComponent<LoopScript>();
         Cursor.visible = false;
+        originalSpeed = speed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (inverted.rotateCam)
-        {
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                //move right
-                rb.velocity = Vector3.right * speed;
-            }
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                //move left
-                rb.velocity = -Vector3.right * speed;
-            }
-            if (Input.GetKey(KeyCode.UpArrow)) {
-                rb.velocity = Vector3.forward * speed;
-            }
-            if (Input.GetKey(KeyCode.DownArrow))
-            {
-                rb.velocity = -Vector3.forward * speed;
-            }
-        }
-        else {
-            float moveHorizontal = Input.GetAxisRaw("Horizontal");
-            float moveVertical = Input.GetAxisRaw("Vertical");
-
-            Vector3 movement = new Vector3(moveHorizontal * speed, rb.velocity.y, moveVertical * speed);
-            rb.velocity = movement;
-        }
-        */
-
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         float moveVertical = Input.GetAxisRaw("Vertical");
-
         Vector3 movement = new Vector3(moveHorizontal * speed, rb.velocity.y, moveVertical * speed);
         rb.velocity = movement;
+
+        if (loopScript.rotateCam)
+        {
+            rb.AddTorque(Vector3.forward * moveHorizontal * torqueAmt * Time.deltaTime, ForceMode.VelocityChange);
+            rb.AddTorque(-Vector3.right * moveVertical * torqueAmt * Time.deltaTime, ForceMode.VelocityChange);
+        }
+        else {
+            rb.AddTorque(-Vector3.forward * moveHorizontal * torqueAmt * Time.deltaTime, ForceMode.VelocityChange);
+            rb.AddTorque(Vector3.right * moveVertical * torqueAmt * Time.deltaTime, ForceMode.VelocityChange);
+        }
 
         //Jump
         if (canJump) {
@@ -82,9 +65,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (inWeb) { //If in spider web slow down
-            speed = 4f;
+            speed = originalSpeed/2f;
         } else {
-            speed = 8f;
+            speed = originalSpeed;
         }
     }
 
