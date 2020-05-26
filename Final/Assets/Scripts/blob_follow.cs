@@ -20,7 +20,7 @@ public class blob_follow : MonoBehaviour
 
     void Update()
     {
-        if (loop.loopNum > 3)
+        if (loop.loopNum > 6)
         { 
             agent.SetDestination(player.position);
             anim.SetBool("follow", true);

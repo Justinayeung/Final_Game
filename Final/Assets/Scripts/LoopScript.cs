@@ -43,7 +43,7 @@ public class LoopScript : MonoBehaviour
 
     void Update()
     {
-
+        FallLocationUpdate();
         if (loopIsTrue)
         {
             vScript.increaseVignette = true;
@@ -55,15 +55,15 @@ public class LoopScript : MonoBehaviour
         {
             //rotate the camera on Z-axis 180 degrees           
             //cam.transform.rotation = Quaternion.Euler(-12f, 1f, 180);
-            cam.transform.rotation = Quaternion.Euler(-10f, 1f, 0);
-            camOff.m_Offset = new Vector3(-2.3f, -3f, 1f);
-            Physics.gravity = new Vector3(0, 9.81F, 0);
+            cam.transform.rotation = Quaternion.Euler(-10f, -1f, 0);
+            camOff.m_Offset = new Vector3(-2.3f, -5f, 1f);
+            Physics.gravity = new Vector3(0, 20F, 0);
         }
         else
         {
             cam.transform.rotation = Quaternion.Euler(12f, 1f, 0);
             camOff.m_Offset = new Vector3(2.3f, 1f, 1f);
-            Physics.gravity = new Vector3(0, -9.81F, 0);
+            Physics.gravity = new Vector3(0, -20F, 0);
         }
         /*
         if (loopNum >= 14)
@@ -86,7 +86,7 @@ public class LoopScript : MonoBehaviour
         }
     }
 
-        public void OnTriggerEnter(Collider other) {
+    public void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Loop_Col")) { //If player hits the trigger for looping
             rotateCam = true;
             firstLoop = false;
@@ -95,13 +95,13 @@ public class LoopScript : MonoBehaviour
             loopNum++;
         }
 
-        if (other.CompareTag("Loop_Col_Invert"))
-        {
+        if (other.CompareTag("Loop_Col_Invert")) {
             rotateCam = false;
             transform.position = fallPos.position;
             loopIsTrue = true;
             loopNum++;
         }
+
         if (other.CompareTag("EndingCollider")) {
             endingCamOffset = true;
         }
@@ -117,4 +117,17 @@ public class LoopScript : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 
+    public void FallLocationUpdate() {
+        if (loopNum <= 4) {
+            fallPos.position = new Vector3(4f, 3f, 3f);
+        } else if (loopNum >= 5) {
+            fallPos.position = new Vector3(-56f, -6f, 3f);
+        }
+
+        if (loopNum <= 5) {
+            fallPosInvert.position = new Vector3(118f, 18f, 5f);
+        } else if (loopNum >= 6) {
+            fallPosInvert.position = new Vector3(200f, 25f, 5f);
+        }
+    }
 }
