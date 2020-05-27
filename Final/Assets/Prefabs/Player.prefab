@@ -125,6 +125,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  originalSpeed: 0
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
+  torqueAmt: 0
+  jumpVelocity: 0
+  _audio: {fileID: 0}
+  walkSound: {fileID: 8300000, guid: 1e2d8deac2019e844bce090311bccb81, type: 3}
+  loopScript: {fileID: 0}
+  CheckloopScript: 0
 --- !u!114 &777788060760308843
 MonoBehaviour:
   m_ObjectHideFlags: 0

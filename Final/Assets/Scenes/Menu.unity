@@ -1624,7 +1624,7 @@ PrefabInstance:
         type: 3}
       propertyPath: walkSound
       value: 
-      objectReference: {fileID: 8300000, guid: 62b191c7e1994af4bb86827ea9c40695, type: 3}
+      objectReference: {fileID: 8300000, guid: 0513bcda0f8f15b4783bad407509d4cd, type: 3}
     - target: {fileID: 777788060760308833, guid: 6aa5f2d1c217dd14aa8fb39c72a4547a,
         type: 3}
       propertyPath: CheckloopScript
@@ -2740,8 +2740,13 @@ PrefabInstance:
     - target: {fileID: 7795948799845008734, guid: 26f7a49760ce1eb4f809304af8662618,
         type: 3}
       propertyPath: m_Volume
-      value: 0.041
+      value: 0.51
       objectReference: {fileID: 0}
+    - target: {fileID: 7795948799845008734, guid: 26f7a49760ce1eb4f809304af8662618,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0513bcda0f8f15b4783bad407509d4cd, type: 3}
     - target: {fileID: 7795948799845008735, guid: 26f7a49760ce1eb4f809304af8662618,
         type: 3}
       propertyPath: m_LocalPosition.x
