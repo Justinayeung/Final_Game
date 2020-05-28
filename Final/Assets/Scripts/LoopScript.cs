@@ -57,7 +57,7 @@ public class LoopScript : MonoBehaviour
             //cam.transform.rotation = Quaternion.Euler(-12f, 1f, 180);
             cam.transform.rotation = Quaternion.Euler(-10f, -1f, 0);
             camOff.m_Offset = new Vector3(-2.3f, -5f, 1f);
-            Physics.gravity = new Vector3(0, 20F, 0);
+            Physics.gravity = new Vector3(0, 21F, 0);
         }
         else
         {
@@ -125,9 +125,9 @@ public class LoopScript : MonoBehaviour
         }
 
         if (loopNum <= 5) {
-            fallPosInvert.position = new Vector3(118f, 18f, 5f);
+            fallPosInvert.position = new Vector3(118f, 19f, 5f);
         } else if (loopNum >= 6) {
-            fallPosInvert.position = new Vector3(200f, 25f, 5f);
+            fallPosInvert.position = new Vector3(200f, 26f, 5f);
         }
     }
 }
