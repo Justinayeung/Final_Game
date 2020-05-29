@@ -79,7 +79,7 @@ public class LoopScript : MonoBehaviour
         if (endingCamOffset)
         {
             Camera.main.backgroundColor = Color.black;
-            Physics.gravity = new Vector3(0, -0.01F, 0);
+            Physics.gravity = new Vector3(0, -0F, 0);
             camOff.m_Offset = new Vector3(5.49f, 1f, 1f);
             credit.SetTrigger("CreditStart");
             StartCoroutine(LoadingScene(0));
